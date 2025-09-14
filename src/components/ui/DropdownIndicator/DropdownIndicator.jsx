@@ -13,7 +13,7 @@ const DropdownIndicator = (props) => {
           transition: "transform 0.25s ease",
         }}
         className={css.icon}>
-        <use href="/src/assets/sprite.svg#icon-arrow" />
+        <use href="/sprite.svg#icon-arrow" />
       </svg>
     </components.DropdownIndicator>
   );
