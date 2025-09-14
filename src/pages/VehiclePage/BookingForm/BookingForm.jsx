@@ -55,10 +55,6 @@ function BookingForm({ carId, booking, setBooking, handleBooking, inputRef }) {
           placeholder="Comment"
           className={css.textarea}></textarea>
 
-        {booking.error && (
-          <div className={css.bookingError}>{booking.error}</div>
-        )}
-
         <button
           type="submit"
           className={css.sendButton}

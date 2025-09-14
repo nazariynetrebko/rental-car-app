@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import { Toaster } from "react-hot-toast";
 
 import Layout from "./components/layout/Layout/Layout";
 import { Route, Routes } from "react-router-dom";
@@ -18,6 +19,7 @@ function App() {
           <Route path="catalog/:id" element={<VehiclePage />} />
         </Route>
       </Routes>
+      <Toaster position="top-right" reverseOrder={false} />
     </Suspense>
   );
 }

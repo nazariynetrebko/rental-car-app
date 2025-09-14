@@ -7,6 +7,7 @@ import api from "../../api/api";
 import Loader from "../../components/ui/Loader/Loader";
 import BookingForm from "./BookingForm/BookingForm";
 import CarDetails from "./CarDetails/CarDetails";
+import toast from "react-hot-toast";
 
 function VehiclePage() {
   const { id } = useParams();
@@ -44,26 +45,28 @@ function VehiclePage() {
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData);
 
+    if (!booking.date) {
+      toast.error("Please select a booking date.");
+      setBooking((prev) => ({ ...prev, loading: false }));
+      return;
+    }
+
     data.bookingDate = booking.date
       ? booking.date.toISOString().split("T")[0]
       : "";
 
     try {
-      const response = await api.post("/rentals", { ...data, carId: id });
-      if (response.status === 201) {
-        alert("Car booked successfully!");
-        navigate("/catalog");
-      } else {
-        setBooking((prev) => ({
-          ...prev,
-          error: "Booking failed. Please try again.",
-        }));
-      }
+      // const response = await api.post("/rentals", { ...data, carId: id });
+
+      // if (response.status === 201) {
+      toast.success("Car booked successfully! 🎉");
+      navigate("/catalog");
+      // } else {
+      //   toast.error("Booking failed. Please try again.");
+      // }
     } catch (error) {
-      setBooking((prev) => ({
-        ...prev,
-        error: "An error occurred while booking the car.",
-      }));
+      toast.error("An error occurred while booking the car.");
+      setBooking((prev) => ({ ...prev, error: "Booking error" }));
     } finally {
       setBooking((prev) => ({ ...prev, loading: false }));
     }
