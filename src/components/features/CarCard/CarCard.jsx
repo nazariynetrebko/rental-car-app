@@ -39,11 +39,17 @@ function CarCard({ car }) {
           aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
           type="button">
           {isFavorite ? (
-            <svg className={`${css.favoriteIcon} ${css.filled}`}>
+            <svg
+              width={16}
+              height={16}
+              className={`${css.favoriteIcon} ${css.filled}`}>
               <use href="/sprite.svg#icon-favorite-filled" />
             </svg>
           ) : (
-            <svg className={`${css.favoriteIcon} ${css.outlined}`}>
+            <svg
+              width={16}
+              height={16}
+              className={`${css.favoriteIcon} ${css.outlined}`}>
               <use href="/sprite.svg#icon-favorite" />
             </svg>
           )}

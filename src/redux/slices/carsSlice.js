@@ -9,28 +9,45 @@ const initialState = {
   error: null,
   filters: {
     brand: "",
-    price: "",
+    price: undefined,
     mileageFrom: "",
     mileageTo: "",
   },
   currentPage: 1,
   totalPages: 1,
   allBrands: [],
-  allPrices: Array.from({ length: 18 }, (_, i) => 30 + i * 10),
+  // allPrices: [],
+  allPrices: Array.from({ length: 6 }, (_, i) => 30 + i * 10),
 };
 
 export const fetchCars = createAsyncThunk(
   "cars/fetchCars",
   async (filters = {}, { rejectWithValue }) => {
     try {
+      const parseNumberParam = (value) => {
+        if (value === undefined || value === null || value === "") {
+          return undefined;
+        }
+        const num = Number(value);
+        return isNaN(num) ? undefined : num;
+      };
+
       const params = {
         page: filters.page || 1,
         limit: filters.limit || 12,
         brand: filters.brand || undefined,
-        price: filters.price || undefined,
-        mileageFrom: filters.mileageFrom || undefined,
-        mileageTo: filters.mileageTo || undefined,
+        rentalPrice: parseNumberParam(filters.price),
+        minMileage: parseNumberParam(filters.mileageFrom),
+        maxMileage: parseNumberParam(filters.mileageTo),
       };
+
+      Object.keys(params).forEach((key) => {
+        if (params[key] === undefined) {
+          delete params[key];
+        }
+      });
+
+      console.log("API Request Params:", params);
 
       const { data } = await getCars(params);
       return { data, meta: { page: params.page } };
@@ -77,7 +94,12 @@ const carsSlice = createSlice({
       state.currentPage = action.payload;
     },
     clearFilters(state) {
-      state.filters = { brand: "", price: "", mileageFrom: "", mileageTo: "" };
+      state.filters = {
+        brand: "",
+        price: undefined,
+        mileageFrom: "",
+        mileageTo: "",
+      };
       state.currentPage = 1;
       state.items = [];
     },
