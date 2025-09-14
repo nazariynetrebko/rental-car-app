@@ -10,8 +10,8 @@ function CarDetails({ car }) {
     <div className={css.details}>
       <h1 className={css.title}>
         {car.brand} {car.model} {car.year}{" "}
-        <span className={css.id}>ID: {car.id}</span>
       </h1>
+      <p className={css.id}>ID:{car.id}</p>
       <div className={css.subTitle}>
         <p className={css.location}>
           <svg className={css.icon}>

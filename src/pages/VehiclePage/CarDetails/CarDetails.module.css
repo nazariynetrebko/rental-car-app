@@ -27,7 +27,7 @@
 .title {
   font-size: 24px;
   font-weight: 700;
-  margin-bottom: 10px;
+
   color: #2c3e50;
 }
 
@@ -44,6 +44,15 @@
   color: #3470ff;
 
   margin-bottom: 32px;
+}
+
+.id {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #8d929a;
+
+  margin-bottom: 20px;
 }
 
 .description {
