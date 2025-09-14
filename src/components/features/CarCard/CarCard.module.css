@@ -5,6 +5,7 @@
 }
 
 .imageContainer {
+  position: relative;
 }
 
 .image {
@@ -18,21 +19,41 @@
 
 .favoriteButton {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background: rgba(255, 255, 255, 0.8);
+  top: 16px;
+  right: 16px;
+  background: none;
   border: none;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  font-size: 1.2rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+
+  background-color: transparent;
 }
 
-.favorited {
-  background: rgba(255, 0, 0, 0.8);
-  color: white;
+.favoriteButton:hover {
+  transform: scale(1.1);
+}
+
+.favoriteIcon {
+  width: 16px;
+  height: 16px;
+
+  transition: transform 0.2s ease;
+}
+
+.outlined {
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+
+.filled {
+  fill: #3470ff;
+  stroke: #3470ff;
 }
 
 .info {

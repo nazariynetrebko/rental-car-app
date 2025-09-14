@@ -35,10 +35,18 @@ function CarCard({ car }) {
         />
         <button
           onClick={toggleFavorite}
-          className={`${css.favoriteButton} ${
-            isFavorite ? css.favorited : ""
-          }`}>
-          {isFavorite ? "❤️" : "♡"}
+          className={css.favoriteButton}
+          aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
+          type="button">
+          {isFavorite ? (
+            <svg className={`${css.favoriteIcon} ${css.filled}`}>
+              <use href="/sprite.svg#icon-favorite-filled" />
+            </svg>
+          ) : (
+            <svg className={`${css.favoriteIcon} ${css.outlined}`}>
+              <use href="/sprite.svg#icon-favorite" />
+            </svg>
+          )}
         </button>
       </div>
 

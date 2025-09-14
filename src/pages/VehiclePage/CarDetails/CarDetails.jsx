@@ -15,7 +15,7 @@ function CarDetails({ car }) {
       <div className={css.subTitle}>
         <p className={css.location}>
           <svg className={css.icon}>
-            <use href="/src/assets/sprite.svg#icon-location" />
+            <use href="/sprite.svg#icon-location" />
           </svg>
           {city}, {country}
         </p>
@@ -30,7 +30,7 @@ function CarDetails({ car }) {
           {car.rentalConditions.map((cond, index) => (
             <li key={index}>
               <svg className={css.icon}>
-                <use href="/src/assets/sprite.svg#icon-check" />
+                <use href="/sprite.svg#icon-check" />
               </svg>
               {cond}
             </li>
@@ -43,25 +43,25 @@ function CarDetails({ car }) {
         <ul>
           <li>
             <svg className={css.icon}>
-              <use href="/src/assets/sprite.svg#icon-calendar" />
+              <use href="/sprite.svg#icon-calendar" />
             </svg>
             Year: {car.year}
           </li>
           <li>
             <svg className={css.icon}>
-              <use href="/src/assets/sprite.svg#icon-auto" />
+              <use href="/sprite.svg#icon-auto" />
             </svg>
             Type: {car.type}
           </li>
           <li>
             <svg className={css.icon}>
-              <use href="/src/assets/sprite.svg#icon-fuel" />
+              <use href="/sprite.svg#icon-fuel" />
             </svg>
             Fuel Consumption: {car.fuelConsumption}
           </li>
           <li>
             <svg className={css.icon}>
-              <use href="/src/assets/sprite.svg#icon-engine" />
+              <use href="/sprite.svg#icon-engine" />
             </svg>
             Engine Size: {car.engineSize}
           </li>
@@ -74,7 +74,7 @@ function CarDetails({ car }) {
           {[...car.accessories, ...car.functionalities].map((item, index) => (
             <li key={index}>
               <svg className={css.icon}>
-                <use href="/src/assets/sprite.svg#icon-check" />
+                <use href="/sprite.svg#icon-check" />
               </svg>
               {item}
             </li>
