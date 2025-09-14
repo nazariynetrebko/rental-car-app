@@ -1,0 +1,133 @@
+.catalog {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.filters {
+  display: flex;
+  gap: 18px;
+  margin-top: 84px;
+  margin-bottom: 56px;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.filterLabel {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  color: #8a8a89;
+  margin-bottom: 8px;
+}
+
+.mileageContainer {
+  display: flex;
+  border-radius: 14px;
+  background-color: #f7f7fb;
+  overflow: hidden;
+}
+
+.mileageInputWrapper {
+  position: relative;
+}
+
+.mileageLabel {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #101828;
+  pointer-events: none;
+}
+
+.inputMileage1 {
+  border-right: 1px solid #dadde1;
+  border-radius: 12px 0 0 12px;
+  padding: 13px 16px;
+  padding-left: 65px;
+  width: 160px;
+  background: #f7f7f7;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #101828;
+}
+.inputMileage2 {
+  border-radius: 0 12px 12px 0;
+  padding: 13px 16px;
+  padding-left: 46px;
+  width: 160px;
+  background: #f7f7f7;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #101828;
+}
+
+/* .mileageInputWrapper:first-child .inputMileage {
+  border-right: 1px solid rgba(138, 138, 137, 0.2);
+} */
+
+.searchButton {
+  border-radius: 12px;
+  padding: 12px 51px;
+  background: #3470ff;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 125%;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.searchButton:hover {
+  background: #0b44cd;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 46px;
+  column-gap: 32px;
+  margin-bottom: 80px;
+}
+
+.loadMoreWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.loadMoreButton {
+  padding: 12px 51px;
+  background-color: transparent;
+  color: #101828;
+  border: 1px solid #3470ff;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.loadMoreButton:hover {
+  border-color: #0b44cd;
+}

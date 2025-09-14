@@ -1,0 +1,123 @@
+.card {
+  overflow: hidden;
+  max-width: 276px;
+  width: 100%;
+}
+
+.imageContainer {
+}
+
+.image {
+  border-radius: 14px;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 20, 23, 0.5) 0%,
+    rgba(18, 20, 23, 0.5) 100%
+  );
+}
+
+.favoriteButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.favorited {
+  background: rgba(255, 0, 0, 0.8);
+  color: white;
+}
+
+.info {
+  padding-top: 16px;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+
+  /* white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px; */
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* максимум 2 рядки */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: calc(16px * 1.25 * 2); /* висота під 2 рядки */
+}
+
+.spanHighlight {
+  color: #3470ff;
+}
+
+.location,
+.details {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 133%;
+  color: #8d929a;
+
+  text-wrap: balance;
+}
+
+.details {
+  margin-bottom: 32px;
+}
+
+.type {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 133%;
+  color: #8d929a;
+}
+
+.mileage {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 133%;
+  color: #8d929a;
+}
+
+.price {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #101828;
+  margin-right: 11px;
+}
+
+.readMoreButton {
+  display: block;
+  border-radius: 12px;
+  background: #3470ff;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  min-width: 100%;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  color: #fff;
+}
+
+.readMoreButton:hover {
+  background-color: #0055d4;
+}

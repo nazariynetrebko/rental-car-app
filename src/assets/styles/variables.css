@@ -1,0 +1,12 @@
+:root {
+  --white: #ffffff;
+  --input: #f7f7f7;
+  --badges: #f2f4f7;
+  --gray-light: #dadde1;
+  --button: #3470ff;
+  --button-hover: #0b44cd;
+  --gray: #8e929a;
+  --main: #101828;
+  --font-family: "Manrope", sans-serif;
+  --second-family: "Inter", sans-serif;
+}

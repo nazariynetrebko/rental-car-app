@@ -1,0 +1,170 @@
+.vehiclePage {
+  padding: 84px 0;
+  background-color: var(--white);
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  margin: 0 120px;
+}
+
+.imageContainer {
+  max-width: 640px;
+  margin-bottom: 40px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 19px;
+}
+.rightColumn {
+  margin-left: 72px;
+  max-width: 488px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.subTitle {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  color: #3470ff;
+
+  margin-bottom: 32px;
+}
+
+.description {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #101828;
+
+  margin-bottom: 68px;
+}
+
+.conditions,
+.specifications,
+.accessories {
+  margin-bottom: 25px;
+}
+
+.conditions h3,
+.specifications h3,
+.accessories h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: #101828;
+
+  margin-bottom: 20px;
+}
+
+.conditions ul,
+.specifications ul,
+.accessories ul {
+  list-style: none;
+  padding: 0;
+}
+
+.conditions li,
+.specifications li,
+.accessories li {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #101828;
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 16px;
+}
+
+.bookingFormContainer {
+  border: 1px solid #dadde1;
+  border-radius: 10px;
+
+  padding: 32px;
+}
+
+.bookingForm h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: #101828;
+
+  margin-bottom: 8px;
+}
+
+.bookingForm p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #8d929a;
+  margin-bottom: 24px;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 16px;
+  background: #f7f7f7;
+  border-radius: 12px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #8d929a;
+}
+
+.textarea {
+  resize: none;
+  padding: 12px 20px 36px;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.sendButton {
+  display: block;
+  background: #3470ff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 51px;
+  cursor: pointer;
+  max-width: 156px;
+  margin: 0 auto;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  color: #fff;
+}
+
+.sendButton:hover {
+  background-color: #2980b9;
+}
+svg {
+  margin-right: 8px;
+}
+.icon {
+  width: 16px;
+  height: 16px;
+  stroke: var(--main);
+}
