@@ -64,13 +64,15 @@ function CarCard({ car }) {
           </h3>
           <p className={css.price}>${car.rentalPrice}</p>
         </div>
+        <div className={css.subTitleWrap}>
+          <p className={css.location}>
+            {city} | {country} | {car.rentalCompany}
+          </p>
+          <p className={css.details}>
+            {car.type} | {formatMileage(car.mileage)} km
+          </p>
+        </div>
 
-        <p className={css.location}>
-          {city} | {country} | {car.rentalCompany}
-        </p>
-        <p className={css.details}>
-          {car.type} | {formatMileage(car.mileage)} km
-        </p>
         <Link to={`/catalog/${car.id}`} className={css.readMoreButton}>
           Read more
         </Link>
